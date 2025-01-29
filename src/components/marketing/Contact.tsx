@@ -15,7 +15,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-gradient-to-b from-purple-50 via-white to-blue-50">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="px-3 py-1 text-sm font-medium bg-gray-100 rounded-full inline-block">

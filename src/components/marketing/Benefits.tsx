@@ -1,6 +1,6 @@
 export const Benefits = () => {
   return (
-    <section id="benefits" className="py-24 bg-gray-50">
+    <section id="benefits" className="py-24 bg-gradient-to-b from-blue-50 via-white to-purple-50">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="px-3 py-1 text-sm font-medium bg-gray-100 rounded-full inline-block">
