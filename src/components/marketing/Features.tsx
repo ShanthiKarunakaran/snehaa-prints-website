@@ -26,18 +26,18 @@ export const Features = () => {
           <span className="px-3 py-1 text-sm font-medium bg-gray-100 rounded-full inline-block">
             Features
           </span>
-          <h2 className="text-4xl font-bold mt-6 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4">
             Designed for Excellence
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 px-4 sm:px-0">
             Discover the powerful features that set our product apart.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-8 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+              className="p-6 sm:p-8 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
             >
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm">
                 {feature.icon}

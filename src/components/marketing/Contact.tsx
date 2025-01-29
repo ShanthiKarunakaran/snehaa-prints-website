@@ -21,14 +21,14 @@ export const Contact = () => {
           <span className="px-3 py-1 text-sm font-medium bg-gray-100 rounded-full inline-block">
             Contact
           </span>
-          <h2 className="text-4xl font-bold mt-6 mb-4">Get in Touch</h2>
-          <p className="text-gray-600">
+          <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4">Get in Touch</h2>
+          <p className="text-gray-600 px-4 sm:px-0">
             Have questions? We'd love to hear from you.
           </p>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="max-w-xl mx-auto space-y-6 bg-gray-50 p-8 rounded-2xl"
+          className="max-w-xl mx-auto space-y-6 bg-gray-50 p-6 sm:p-8 rounded-2xl"
         >
           <div>
             <Input
