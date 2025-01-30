@@ -34,14 +34,14 @@ export const Navigation = () => {
           </button>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#products" className="text-gray-600 hover:text-green-600 transition-colors">
+            <a href="#features" className="text-gray-600 hover:text-green-600 transition-colors">
               Products
             </a>
-            <a href="#workshops" className="text-gray-600 hover:text-green-600 transition-colors">
-              Workshops
+            <a href="#benefits" className="text-gray-600 hover:text-green-600 transition-colors">
+              About Us
             </a>
-            <a href="#community" className="text-gray-600 hover:text-green-600 transition-colors">
-              Community
+            <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">
+              Contact
             </a>
             <Button
               className="bg-green-600 hover:bg-green-700 text-white"
@@ -53,14 +53,14 @@ export const Navigation = () => {
           {isMenuOpen && (
             <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
               <div className="flex flex-col space-y-4 p-6">
-                <a href="#products" className="text-gray-600 hover:text-green-600 transition-colors">
+                <a href="#features" className="text-gray-600 hover:text-green-600 transition-colors">
                   Products
                 </a>
-                <a href="#workshops" className="text-gray-600 hover:text-green-600 transition-colors">
-                  Workshops
+                <a href="#benefits" className="text-gray-600 hover:text-green-600 transition-colors">
+                  About Us
                 </a>
-                <a href="#community" className="text-gray-600 hover:text-green-600 transition-colors">
-                  Community
+                <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">
+                  Contact
                 </a>
                 <Button
                   className="bg-green-600 hover:bg-green-700 text-white w-full"
