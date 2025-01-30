@@ -15,25 +15,25 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-purple-50 via-white to-blue-50">
+    <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="px-3 py-1 text-sm font-medium bg-gray-100 rounded-full inline-block">
+          <span className="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full inline-block">
             Contact
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4">Get in Touch</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4 text-gray-900">Get in Touch</h2>
           <p className="text-gray-600 px-4 sm:px-0">
             Have questions? We'd love to hear from you.
           </p>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="max-w-xl mx-auto space-y-6 bg-gray-50 p-6 sm:p-8 rounded-2xl"
+          className="max-w-xl mx-auto space-y-6 bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-blue-100"
         >
           <div>
             <Input
               placeholder="Your name"
-              className="bg-white"
+              className="border-blue-200 focus:border-blue-400"
               required
             />
           </div>
@@ -41,18 +41,18 @@ export const Contact = () => {
             <Input
               type="email"
               placeholder="Your email"
-              className="bg-white"
+              className="border-blue-200 focus:border-blue-400"
               required
             />
           </div>
           <div>
             <Textarea
               placeholder="Your message"
-              className="bg-white min-h-[150px]"
+              className="border-blue-200 focus:border-blue-400 min-h-[150px]"
               required
             />
           </div>
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
             Send Message
           </Button>
         </form>

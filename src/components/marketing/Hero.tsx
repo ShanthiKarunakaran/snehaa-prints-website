@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen relative flex items-center justify-center pt-20 pb-32 px-6 overflow-hidden bg-gradient-to-b from-blue-50 via-white to-purple-50">
+    <section className="min-h-screen relative flex items-center justify-center pt-20 pb-32 px-6 overflow-hidden bg-white">
       <div className="container mx-auto relative">
         <div className="max-w-3xl mx-auto text-center space-y-8 sm:space-y-10">
           <span className="px-3 py-1 text-sm font-semibold bg-blue-100 text-blue-800 rounded-full inline-block shadow-sm animate-fadeIn">
@@ -21,14 +21,14 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fadeIn">
             <Button 
               size="lg" 
-              className="w-full sm:w-auto min-w-[160px] bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full sm:w-auto min-w-[160px] bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get Started
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto min-w-[160px] border-2 bg-white/90 hover:bg-white shadow-md hover:shadow-lg transition-all duration-300"
+              className="w-full sm:w-auto min-w-[160px] border-2 border-blue-200 bg-white hover:bg-blue-50 text-blue-600 shadow-md hover:shadow-lg transition-all duration-300"
             >
               Learn More
             </Button>
