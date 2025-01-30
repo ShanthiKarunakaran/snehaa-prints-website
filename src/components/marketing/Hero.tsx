@@ -2,18 +2,18 @@ import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen relative flex items-center justify-center pt-20 pb-32 px-6 overflow-hidden bg-white">
+    <section className="min-h-screen relative flex items-center justify-center pt-20 pb-32 px-6 overflow-hidden bg-gradient-to-br from-blue-50 via-blue-100 to-white">
       <div className="container mx-auto relative">
         <div className="max-w-3xl mx-auto text-center space-y-8 sm:space-y-10">
           <span className="px-3 py-1 text-sm font-semibold bg-blue-100 text-blue-800 rounded-full inline-block shadow-sm animate-fadeIn">
             Introducing Our Product
           </span>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 animate-fadeIn">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-blue-900 animate-fadeIn">
             Transform Your Experience
           </h1>
           
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed animate-fadeIn">
+          <p className="text-lg sm:text-xl text-blue-700 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed animate-fadeIn">
             Discover a new way to enhance your daily workflow with our innovative solution. 
             We're revolutionizing how you interact with technology.
           </p>
