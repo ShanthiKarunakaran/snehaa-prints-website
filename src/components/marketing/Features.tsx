@@ -23,13 +23,13 @@ export const Features = () => {
     <section id="features" className="py-24 bg-gradient-to-b from-white via-[#F8FAFF] to-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full inline-block">
+          <span className="px-3 py-1 text-sm font-medium bg-blue-100 text-black rounded-full inline-block">
             Features
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold mt-6 mb-4 text-black">
             Designed for Excellence
           </h2>
-          <p className="text-gray-600 px-4 sm:px-0">
+          <p className="text-black/80 px-4 sm:px-0">
             Discover the powerful features that set our product apart.
           </p>
         </div>
@@ -42,8 +42,8 @@ export const Features = () => {
               <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-black">{feature.title}</h3>
+              <p className="text-black/80">{feature.description}</p>
             </div>
           ))}
         </div>
