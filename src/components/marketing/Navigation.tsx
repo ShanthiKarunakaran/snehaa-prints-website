@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X, Camera } from "lucide-react";
 
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,51 +21,57 @@ export const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2 text-green-600">
-            <Leaf className="h-6 w-6" />
-            <span className="text-xl font-semibold">Green Haven</span>
+          <div className="flex items-center space-x-2 text-purple-600">
+            <Camera className="h-6 w-6" />
+            <span className="text-xl font-semibold">SnapJoy</span>
           </div>
           
           <button
-            className="md:hidden text-green-600"
+            className="md:hidden text-purple-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-green-600 transition-colors">
-              Products
+            <a href="#portfolio" className="text-gray-600 hover:text-purple-600 transition-colors">
+              Portfolio
             </a>
-            <a href="#benefits" className="text-gray-600 hover:text-green-600 transition-colors">
-              About Us
+            <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
+              About
             </a>
-            <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">
+            <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors">
+              Testimonials
+            </a>
+            <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors">
               Contact
             </a>
             <Button
-              className="bg-green-600 hover:bg-green-700 text-white"
+              className="bg-purple-600 hover:bg-purple-700 text-white"
             >
-              Get Started
+              Book a Session
             </Button>
           </div>
 
           {isMenuOpen && (
             <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
               <div className="flex flex-col space-y-4 p-6">
-                <a href="#features" className="text-gray-600 hover:text-green-600 transition-colors">
-                  Products
+                <a href="#portfolio" className="text-gray-600 hover:text-purple-600 transition-colors">
+                  Portfolio
                 </a>
-                <a href="#benefits" className="text-gray-600 hover:text-green-600 transition-colors">
-                  About Us
+                <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
+                  About
                 </a>
-                <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors">
+                <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors">
+                  Testimonials
+                </a>
+                <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors">
                   Contact
                 </a>
                 <Button
-                  className="bg-green-600 hover:bg-green-700 text-white w-full"
+                  className="bg-purple-600 hover:bg-purple-700 text-white w-full"
                 >
-                  Get Started
+                  Book a Session
                 </Button>
               </div>
             </div>
