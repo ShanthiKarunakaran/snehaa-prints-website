@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Camera, Image, Heart } from "lucide-react";
 
 export const Hero = () => {
+  const scrollToPortfolio = () => {
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen relative flex items-center justify-center pt-20 pb-32 px-6 overflow-hidden bg-gradient-to-br from-[#9b87f5] via-[#E5DEFF] to-white">
       {/* Mystical floating orbs */}
@@ -33,6 +40,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="w-full sm:w-auto min-w-[160px] bg-purple-600 hover:bg-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={scrollToPortfolio}
             >
               View Portfolio
             </Button>
