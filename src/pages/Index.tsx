@@ -39,7 +39,7 @@ const Index = () => {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 bg-black/80 hover:bg-black text-white p-3 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 ${
+        className={`fixed bottom-8 right-8 bg-[#6E59A5]/80 hover:bg-[#6E59A5] text-white p-3 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 ${
           showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
         aria-label="Back to top"
