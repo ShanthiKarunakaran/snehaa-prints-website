@@ -16,21 +16,21 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1492037766660-2a56f9eb3fcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1508796079212-a4b83cbf734d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        {/* Vintage overlay */}
-        <div className="absolute inset-0 bg-[#e2d1c3]/40 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        {/* Dreamy overlay */}
+        <div className="absolute inset-0 bg-[#FDE1D3]/30 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
       </div>
       
       <div className="container mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8 sm:space-y-10">
           <div className="flex items-center justify-center gap-4">
-            <div className="relative w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
+            <div className="relative w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
               <div className="absolute w-3 h-3 bg-[#8E9196] rounded-full top-4 left-4"></div>
               <div className="absolute w-4 h-4 border-2 border-[#8E9196] rounded-full top-4 right-3"></div>
               <div className="absolute w-2 h-1 bg-[#8E9196] transform rotate-[15deg] top-8 left-7"></div>
