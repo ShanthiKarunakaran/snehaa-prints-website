@@ -27,18 +27,21 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FDE1D3]/10 to-white relative">
+    <div className="min-h-screen bg-gradient-to-b from-[#FDE1D3]/20 via-white to-[#E5DEFF]/20 relative">
       <Navigation />
       <Hero />
-      {/* Gradient transition div */}
-      <div className="h-24 bg-gradient-to-b from-[#FDE1D3]/20 via-[#E5DEFF]/20 to-white"></div>
-      <div className="bg-gradient-to-b from-white via-[#E5DEFF]/10 to-white">
+      {/* Enhanced gradient transitions */}
+      <div className="h-32 bg-gradient-to-b from-[#FDE1D3]/30 via-[#E5DEFF]/20 to-transparent"></div>
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#E5DEFF]/30 to-transparent pointer-events-none"></div>
         <Portfolio />
       </div>
-      <div className="bg-gradient-to-b from-white via-[#FDE1D3]/10 to-white">
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FDE1D3]/30 to-transparent pointer-events-none"></div>
         <About />
       </div>
-      <div className="bg-[#E5DEFF]/5">
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#E5DEFF]/10 to-[#FDE1D3]/5 pointer-events-none"></div>
         <Contact />
       </div>
       
