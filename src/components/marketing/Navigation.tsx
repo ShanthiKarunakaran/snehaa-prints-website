@@ -43,7 +43,7 @@ export const Navigation = () => {
           
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white hover:text-white/80 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -53,16 +53,16 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center justify-center flex-1 mx-4">
             <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-white/80 transition-colors px-3 py-1">
+                <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-white/80 transition-colors px-3 py-1 focus:outline-none">
                   <span>Photography</span>
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-48 bg-white">
                   {photographyCategories.map((category) => (
-                    <DropdownMenuItem key={category.label} className="cursor-pointer">
+                    <DropdownMenuItem key={category.label} className="cursor-pointer focus:outline-none">
                       <a
                         href={category.href}
-                        className="w-full text-gray-600 hover:text-black"
+                        className="w-full text-gray-600 hover:text-black focus:outline-none"
                       >
                         {category.label}
                       </a>
@@ -71,15 +71,15 @@ export const Navigation = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               <div className="w-px h-4 bg-white/20 mx-2"></div>
-              <a href="#about" className="text-white hover:text-white/80 transition-colors px-3 py-1">
+              <a href="#about" className="text-white hover:text-white/80 transition-colors px-3 py-1 focus:outline-none">
                 About Me
               </a>
               <div className="w-px h-4 bg-white/20 mx-2"></div>
-              <a href="#testimonials" className="text-white hover:text-white/80 transition-colors px-3 py-1">
+              <a href="#testimonials" className="text-white hover:text-white/80 transition-colors px-3 py-1 focus:outline-none">
                 Testimonials
               </a>
               <div className="w-px h-4 bg-white/20 mx-2"></div>
-              <a href="#contact" className="text-white hover:text-white/80 transition-colors px-3 py-1">
+              <a href="#contact" className="text-white hover:text-white/80 transition-colors px-3 py-1 focus:outline-none">
                 Contact
               </a>
             </div>
@@ -87,20 +87,20 @@ export const Navigation = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4 mr-6">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors focus:outline-none">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors focus:outline-none">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors focus:outline-none">
               <Twitter className="h-5 w-5" />
             </a>
           </div>
 
           {/* Book a Session button on the right */}
           <Button
-            className="hidden md:inline-flex bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium"
+            className="hidden md:inline-flex bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium focus:outline-none"
           >
             Book a Session
           </Button>
@@ -113,34 +113,34 @@ export const Navigation = () => {
                   <a
                     key={category.label}
                     href={category.href}
-                    className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20"
+                    className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none"
                   >
                     {category.label}
                   </a>
                 ))}
-                <a href="#about" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20">
+                <a href="#about" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none">
                   About Me
                 </a>
-                <a href="#testimonials" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20">
+                <a href="#testimonials" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none">
                   Testimonials
                 </a>
-                <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20">
+                <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none">
                   Contact
                 </a>
                 {/* Social Links in mobile menu */}
                 <div className="flex justify-center space-x-6 py-2">
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors focus:outline-none">
                     <Instagram className="h-5 w-5" />
                   </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors focus:outline-none">
                     <Facebook className="h-5 w-5" />
                   </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors focus:outline-none">
                     <Twitter className="h-5 w-5" />
                   </a>
                 </div>
                 <Button
-                  className="bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium w-full"
+                  className="bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium w-full focus:outline-none"
                 >
                   Book a Session
                 </Button>
