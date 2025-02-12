@@ -50,7 +50,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fadeIn">
             <Button 
               size="lg" 
-              className="w-full sm:w-auto min-w-[160px] bg-white/90 hover:bg-white text-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
+              className="w-full sm:w-auto min-w-[160px] bg-[#FDE1D3] hover:bg-[#F8D1C1] text-[#8E9196] shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium"
               onClick={scrollToPortfolio}
             >
               View Portfolio
@@ -58,7 +58,7 @@ export const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto min-w-[160px] border-2 border-white/80 bg-transparent hover:bg-white/20 text-white shadow-md hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
+              className="w-full sm:w-auto min-w-[160px] border-2 border-[#FDE1D3] bg-transparent hover:bg-[#FDE1D3]/20 text-white shadow-md hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
             >
               Book a Session
             </Button>
