@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Camera, ChevronDown } from "lucide-react";
+import { Menu, X, Camera, ChevronDown, Instagram, Facebook, Twitter } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -85,6 +85,19 @@ export const Navigation = () => {
             </div>
           </div>
 
+          {/* Social Links */}
+          <div className="hidden md:flex items-center space-x-4 mr-6">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+              <Twitter className="h-5 w-5" />
+            </a>
+          </div>
+
           {/* Book a Session button on the right */}
           <Button
             className="hidden md:inline-flex bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium"
@@ -114,6 +127,18 @@ export const Navigation = () => {
                 <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20">
                   Contact
                 </a>
+                {/* Social Links in mobile menu */}
+                <div className="flex justify-center space-x-6 py-2">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                    <Twitter className="h-5 w-5" />
+                  </a>
+                </div>
                 <Button
                   className="bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium w-full"
                 >
