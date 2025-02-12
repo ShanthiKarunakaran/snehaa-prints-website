@@ -121,7 +121,7 @@ const LightShadowPage = () => {
                   View Original Project <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB] bg-clip-text text-transparent">
+              <h1 className="text-4xl sm:text-5xl font-bold text-white px-6 py-4 rounded-lg bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB]">
                 Light & Shadow
               </h1>
               <p className="text-xl text-gray-600">
@@ -132,7 +132,7 @@ const LightShadowPage = () => {
 
             {sections.map((section, index) => (
               <section key={section.title} className="space-y-8">
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-[#6E59A5]/90 to-[#7E69AB]/90 bg-clip-text text-transparent border-b border-gray-200 pb-4">
+                <h2 className="text-3xl font-bold text-white px-6 py-3 rounded-lg bg-gradient-to-r from-[#6E59A5] to-[#7E69AB]">
                   {section.title}
                 </h2>
                 <div className={`grid grid-cols-1 ${
@@ -175,7 +175,7 @@ const LightShadowPage = () => {
             ))}
 
             <section className="bg-purple-50 rounded-xl p-8 mt-12">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-[#6E59A5]/90 to-[#7E69AB]/90 bg-clip-text text-transparent mb-4">
+              <h2 className="text-2xl font-bold text-white px-6 py-3 rounded-lg bg-gradient-to-r from-[#6E59A5] to-[#7E69AB] mb-4">
                 Project Reflection
               </h2>
               <p className="text-gray-600">
