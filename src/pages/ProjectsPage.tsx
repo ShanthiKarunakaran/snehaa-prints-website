@@ -1,7 +1,6 @@
-
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Lightbulb, Palette, Image, Sparkles, FileHeart, Book, ExternalLink } from "lucide-react";
+import { ArrowLeft, Lightbulb, Palette, Image, Sparkles, FileHeart, Book, ExternalLink, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const ProjectsPage = () => {
@@ -13,6 +12,7 @@ const ProjectsPage = () => {
       description: "Exploring the interplay of light and darkness in photography",
       icon: Lightbulb,
       url: "https://snehaarunphotographyii.weebly.com/light-and-shadow.html",
+      internalUrl: "/technique/light-shadow.html",
       category: "Technique Study"
     },
     {
@@ -95,26 +95,38 @@ const ProjectsPage = () => {
                   {projects
                     .filter(project => project.category === category)
                     .map((project) => (
-                      <a
-                        key={project.title}
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group relative overflow-hidden rounded-2xl border border-purple-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-purple-200"
-                      >
+                      <div key={project.title} className="group relative overflow-hidden rounded-2xl border border-purple-100 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-purple-200">
                         <div className="flex items-start justify-between">
                           <div className="space-y-3">
                             <project.icon className="h-8 w-8 text-purple-600" />
                             <div className="space-y-2">
-                              <h3 className="text-xl font-semibold text-gray-900 group-hover:text-purple-700 transition-colors flex items-center gap-2">
+                              <h3 className="text-xl font-semibold text-gray-900">
                                 {project.title}
-                                <ExternalLink className="h-4 w-4 opacity-60" />
                               </h3>
                               <p className="text-gray-600">{project.description}</p>
+                              <div className="flex items-center space-x-4 pt-2">
+                                {project.internalUrl && (
+                                  <a
+                                    href={project.internalUrl}
+                                    className="text-sm text-purple-600 hover:text-purple-800 inline-flex items-center"
+                                  >
+                                    View Details
+                                    <ChevronRight className="ml-1 h-4 w-4" />
+                                  </a>
+                                )}
+                                <a
+                                  href={project.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm text-gray-500 hover:text-gray-700 inline-flex items-center"
+                                >
+                                  Original Project <ExternalLink className="ml-1 h-3 w-3" />
+                                </a>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </div>
                     ))}
                 </div>
               </div>
