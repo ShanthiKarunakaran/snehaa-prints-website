@@ -68,11 +68,18 @@ const ProjectsPage = () => {
   ];
 
   const categories = ["Technique Study", "Creative Projects", "Personal Work", "Process Journals"];
+  
+  const tabColors = {
+    "Technique Study": "bg-[#8B5CF6] hover:bg-[#7C3AED]",
+    "Creative Projects": "bg-[#F97316] hover:bg-[#EA580C]",
+    "Personal Work": "bg-[#0EA5E9] hover:bg-[#0284C7]",
+    "Process Journals": "bg-[#D946EF] hover:bg-[#C026D3]"
+  };
 
   const ProjectList = ({ items }: { items: typeof projects }) => (
     <div className="space-y-6">
       {items.map((project) => (
-        <div key={project.title} className="group">
+        <div key={project.title} className="group border-b border-yellow-600/20 pb-6 last:border-0">
           <div className="flex items-start justify-between space-x-4">
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
@@ -94,7 +101,7 @@ const ProjectsPage = () => {
               onClick={() => navigate(project.internalUrl)}
               variant="outline"
               size="icon"
-              className="rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="rounded-lg bg-yellow-50 hover:bg-yellow-100 transition-colors border-yellow-200"
             >
               <project.icon className="h-5 w-5 text-gray-700" />
             </Button>
@@ -111,25 +118,33 @@ const ProjectsPage = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-900 mb-8">Projects</h1>
           
-          <Tabs defaultValue={categories[0]} className="w-full">
-            <TabsList className="w-full grid grid-cols-2 md:grid-cols-4 mb-8">
-              {categories.map((category) => (
-                <TabsTrigger
-                  key={category}
-                  value={category}
-                  className="data-[state=active]:bg-purple-100 data-[state=active]:text-purple-900"
-                >
-                  {category}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {categories.map((category) => (
-              <TabsContent key={category} value={category}>
-                <ProjectList items={projects.filter(p => p.category === category)} />
-              </TabsContent>
-            ))}
-          </Tabs>
+          <div className="bg-[#FEF7CD] rounded-lg shadow-lg p-6 border border-yellow-200">
+            <Tabs defaultValue={categories[0]} className="w-full">
+              <TabsList className="w-full grid grid-cols-2 md:grid-cols-4 gap-2 mb-8 bg-transparent">
+                {categories.map((category) => (
+                  <TabsTrigger
+                    key={category}
+                    value={category}
+                    className={`${tabColors[category as keyof typeof tabColors]} 
+                    text-white data-[state=active]:brightness-110 
+                    data-[state=active]:shadow-lg transition-all 
+                    rounded-t-lg rounded-b-none border-b-4 border-yellow-400/50
+                    h-12 font-medium`}
+                  >
+                    {category}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              
+              <div className="bg-white rounded-lg p-6 shadow-inner">
+                {categories.map((category) => (
+                  <TabsContent key={category} value={category}>
+                    <ProjectList items={projects.filter(p => p.category === category)} />
+                  </TabsContent>
+                ))}
+              </div>
+            </Tabs>
+          </div>
         </div>
       </div>
     </div>
