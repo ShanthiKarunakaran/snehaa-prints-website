@@ -37,7 +37,10 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo on the left */}
           <div className="flex items-center space-x-2 text-white">
-            <Camera className="h-6 w-6" />
+            <div className="relative">
+              <Camera className="h-8 w-8 stroke-[1.5]" strokeLinecap="round" />
+              <div className="absolute -top-1 right-0 w-2 h-2 bg-red-500 rounded-full" />
+            </div>
             <span className="text-xl font-semibold">snehaa.prints</span>
           </div>
           
