@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Lightbulb, Palette, Image, Sparkles, FileHeart, Book, ExternalLink, ChevronRight } from "lucide-react";
@@ -20,6 +21,7 @@ const ProjectsPage = () => {
       description: "Understanding and applying color principles in photography",
       icon: Palette,
       url: "https://snehaarunphotographyii.weebly.com/color-theory.html",
+      internalUrl: "/technique/color-theory.html",
       category: "Technique Study"
     },
     {
@@ -27,6 +29,7 @@ const ProjectsPage = () => {
       description: "Creating dreamlike compositions through digital manipulation",
       icon: Sparkles,
       url: "https://snehaarunphotographyii.weebly.com/photomontage-and-surrealism.html",
+      internalUrl: "/technique/photomontage.html",
       category: "Creative Projects"
     },
     {
