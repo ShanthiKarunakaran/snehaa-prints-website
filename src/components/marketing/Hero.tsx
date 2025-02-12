@@ -24,7 +24,7 @@ export const Hero = () => {
         <div className="max-w-3xl mx-auto text-center space-y-8 sm:space-y-10">
           <div className="flex items-center justify-center space-x-2">
             <Camera className="h-8 w-8 text-purple-600" />
-            <span className="text-3xl font-bold text-purple-600">SnapJoy</span>
+            <span className="text-3xl font-bold text-purple-600">snehaa.prints</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 animate-fadeIn">
