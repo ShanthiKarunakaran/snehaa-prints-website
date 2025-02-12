@@ -22,8 +22,12 @@ export const Hero = () => {
       
       <div className="container mx-auto relative">
         <div className="max-w-3xl mx-auto text-center space-y-8 sm:space-y-10">
-          <div className="flex items-center justify-center space-x-2">
-            <Camera className="h-8 w-8 text-[#8E9196]" />
+          <div className="flex items-center justify-center gap-4">
+            <div className="relative w-16 h-16 bg-[#FDE1D3] rounded-full flex items-center justify-center">
+              <div className="absolute w-3 h-3 bg-[#8E9196] rounded-full top-4 left-4"></div>
+              <div className="absolute w-4 h-4 border-2 border-[#8E9196] rounded-full top-4 right-3"></div>
+              <div className="absolute w-2 h-1 bg-[#8E9196] transform rotate-[15deg] top-8 left-7"></div>
+            </div>
             <span className="text-3xl font-bold text-[#8E9196]">snehaa.prints</span>
           </div>
           
