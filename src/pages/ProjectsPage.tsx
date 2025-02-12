@@ -116,7 +116,17 @@ const ProjectsPage = () => {
       <Navigation />
       <div className="container mx-auto px-6 pt-32 pb-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">Projects</h1>
+          <div className="flex items-center justify-between mb-8">
+            <h1 className="text-3xl font-bold text-gray-900">Projects</h1>
+            <Button
+              variant="ghost"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
+              onClick={() => navigate('/')}
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Home
+            </Button>
+          </div>
           
           <div className="bg-[#FEF7CD] rounded-lg shadow-lg p-6 border border-yellow-200">
             <Tabs defaultValue={categories[0]} className="w-full">
