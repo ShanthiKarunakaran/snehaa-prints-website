@@ -29,29 +29,29 @@ const LightShadowPage = () => {
       title: "Reference Collection",
       content: [
         {
-          image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-          title: "Natural Light Study",
-          description: "Exploring the interaction of natural light with various subjects"
+          image: "/lovable-uploads/953dd445-a3fe-4982-b178-0b131d025328.png",
+          title: "Wheel Shadow Study",
+          description: "A dramatic composition of a wheel creating intricate shadow patterns on snow"
         },
         {
-          image: "https://images.unsplash.com/photo-1482160549825-59d1b23cb208",
-          title: "Shadow Patterns",
-          description: "Analyzing geometric patterns created by light and shadow"
+          image: "/lovable-uploads/5194d17a-8765-485b-b33b-7c317205b8b7.png",
+          title: "Minimalist Light Study",
+          description: "Simple yet powerful study of light and shadow using an egg"
         },
         {
-          image: "https://images.unsplash.com/photo-1509343256512-d77a5cb3791b",
-          title: "Architectural Shadows",
-          description: "Study of shadows in architectural photography"
+          image: "/lovable-uploads/862806f6-f0e1-4c65-a86e-fada6720770f.png",
+          title: "Glass Refraction",
+          description: "Exploring light patterns and shadows created through glass"
         },
         {
-          image: "https://images.unsplash.com/photo-1504198322253-cfa87a0ff25f",
-          title: "Dramatic Contrasts",
-          description: "High contrast lighting scenarios and their impact"
+          image: "/lovable-uploads/90262c81-a969-4f0d-8799-d74bd4754c41.png",
+          title: "Rustic Shadows",
+          description: "Study of multiple objects creating overlapping shadow patterns"
         },
         {
-          image: "https://images.unsplash.com/photo-1534445967958-f89e55d2b09b",
-          title: "Environmental Light",
-          description: "Natural environmental lighting conditions and effects"
+          image: "/lovable-uploads/5d08a590-e4d5-4528-aa39-6fb6ab28a672.png",
+          title: "Natural Light Patterns",
+          description: "Tree canopy creating intricate shadow patterns on the ground"
         }
       ]
     },
