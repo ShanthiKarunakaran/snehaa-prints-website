@@ -53,7 +53,7 @@ export const Navigation = () => {
           <div className="hidden md:flex items-center justify-center flex-1 mx-4">
             <div className="flex items-center space-x-8">
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors">
+                <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
                   <span>Photography</span>
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
@@ -70,13 +70,13 @@ export const Navigation = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
+              <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
                 About Me
               </a>
-              <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors">
+              <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
                 Testimonials
               </a>
-              <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors">
+              <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
                 Contact
               </a>
             </div>
@@ -97,18 +97,18 @@ export const Navigation = () => {
                   <a
                     key={category.label}
                     href={category.href}
-                    className="text-gray-600 hover:text-purple-600 transition-colors"
+                    className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100"
                   >
                     {category.label}
                   </a>
                 ))}
-                <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
                   About Me
                 </a>
-                <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
                   Testimonials
                 </a>
-                <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
                   Contact
                 </a>
                 <Button
