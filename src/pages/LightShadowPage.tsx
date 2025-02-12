@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
@@ -59,19 +60,9 @@ const LightShadowPage = () => {
       title: "Process",
       content: [
         {
-          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-          title: "Technical Exploration",
-          description: "Testing different lighting setups and techniques"
-        },
-        {
-          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-          title: "Experimentation",
-          description: "Working with various subjects and lighting conditions"
-        },
-        {
-          image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
-          title: "Refinement",
-          description: "Fine-tuning compositions and exposure settings"
+          image: "/lovable-uploads/43650de6-9576-4acf-9ca6-963e02645e32.png",
+          title: "Light Study Series",
+          description: "A series exploring different lighting conditions and their effects on everyday objects, from glass refraction to dramatic shadows"
         }
       ]
     },
