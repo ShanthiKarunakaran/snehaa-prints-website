@@ -70,19 +70,24 @@ const LightShadowPage = () => {
       title: "Final Series",
       content: [
         {
-          image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843",
-          title: "Natural Light Study",
-          description: "Capturing the interplay of sunlight and shadows in nature"
+          image: "https://snehaarunphotographyii.weebly.com/uploads/1/4/8/4/148409862/glass_orig.jpg",
+          title: "Glass Study",
+          description: "A dramatic exploration of light refraction and shadow through glass, capturing the intricate patterns and textures"
         },
         {
-          image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
-          title: "Contrast Study",
-          description: "Exploring dramatic light and shadow contrasts"
+          image: "https://snehaarunphotographyii.weebly.com/uploads/1/4/8/4/148409862/flower_orig.jpg",
+          title: "Floral Shadow Study",
+          description: "Delicate interplay of light and shadow across botanical forms, revealing texture and depth"
         },
         {
-          image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-          title: "Environmental Portrait",
-          description: "Using natural light to create compelling portraits"
+          image: "https://snehaarunphotographyii.weebly.com/uploads/1/4/8/4/148409862/shoe_orig.jpg",
+          title: "Form Study",
+          description: "Strong silhouette created through dramatic lighting, emphasizing shape and texture"
+        },
+        {
+          image: "https://snehaarunphotographyii.weebly.com/uploads/1/4/8/4/148409862/chair-1-2_orig.jpg",
+          title: "Chair Study",
+          description: "Architectural exploration of light and shadow using everyday objects, highlighting form and structure"
         }
       ]
     }
