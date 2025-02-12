@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
@@ -23,11 +22,36 @@ const LightShadowPage = () => {
           image: "/lovable-uploads/01676206-84f8-4cb6-98d7-821358391ac2.png",
           title: "Shadow Study Plans",
           description: "Detailed planning diagrams showing different approaches to capturing shadows, including front and side angles"
-        },
+        }
+      ]
+    },
+    {
+      title: "Reference Collection",
+      content: [
         {
           image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-          title: "Reference Collection",
-          description: "Gathering inspiring works and technical references"
+          title: "Natural Light Study",
+          description: "Exploring the interaction of natural light with various subjects"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1482160549825-59d1b23cb208",
+          title: "Shadow Patterns",
+          description: "Analyzing geometric patterns created by light and shadow"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1509343256512-d77a5cb3791b",
+          title: "Architectural Shadows",
+          description: "Study of shadows in architectural photography"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1504198322253-cfa87a0ff25f",
+          title: "Dramatic Contrasts",
+          description: "High contrast lighting scenarios and their impact"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1534445967958-f89e55d2b09b",
+          title: "Environmental Light",
+          description: "Natural environmental lighting conditions and effects"
         }
       ]
     },
@@ -78,7 +102,7 @@ const LightShadowPage = () => {
       <Navigation />
       <div className="pt-32 pb-24">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-6xl mx-auto space-y-12">
             <Button 
               onClick={() => navigate("/projects")} 
               variant="ghost" 
@@ -115,7 +139,13 @@ const LightShadowPage = () => {
                 <h2 className="text-3xl font-bold text-gray-900 border-b border-gray-200 pb-4">
                   {section.title}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className={`grid grid-cols-1 ${
+                  section.title === "Inspiration and Planning" 
+                    ? "md:grid-cols-2" 
+                    : section.title === "Reference Collection"
+                    ? "md:grid-cols-3 lg:grid-cols-5"
+                    : "md:grid-cols-3"
+                } gap-6`}>
                   {section.content.map((item, i) => (
                     <div key={i} className="group space-y-4">
                       <Dialog>
