@@ -7,21 +7,66 @@ import { useNavigate } from "react-router-dom";
 const LightShadowPage = () => {
   const navigate = useNavigate();
 
-  const examples = [
+  const sections = [
     {
-      title: "Natural Light Study",
-      description: "Exploring how natural light creates depth and dimension",
-      image: "https://images.unsplash.com/photo-1617369120004-4fc70312c5e6"
+      title: "Inspiration and Planning",
+      content: [
+        {
+          image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+          title: "Initial Research",
+          description: "Exploring the fundamentals of light behavior and shadow formation in photography"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+          title: "Concept Development",
+          description: "Sketching ideas and planning shot compositions"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+          title: "Reference Collection",
+          description: "Gathering inspiring works and technical references"
+        }
+      ]
     },
     {
-      title: "Shadow Play",
-      description: "Experimenting with cast shadows and geometric patterns",
-      image: "https://images.unsplash.com/photo-1504610926078-a1611febcad3"
+      title: "Process",
+      content: [
+        {
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+          title: "Technical Exploration",
+          description: "Testing different lighting setups and techniques"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+          title: "Experimentation",
+          description: "Working with various subjects and lighting conditions"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
+          title: "Refinement",
+          description: "Fine-tuning compositions and exposure settings"
+        }
+      ]
     },
     {
-      title: "Contrast Study",
-      description: "High contrast photography emphasizing light and dark",
-      image: "https://images.unsplash.com/photo-1509343256512-d77a5cb3791b"
+      title: "Final Series",
+      content: [
+        {
+          image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843",
+          title: "Natural Light Study",
+          description: "Capturing the interplay of sunlight and shadows in nature"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
+          title: "Contrast Study",
+          description: "Exploring dramatic light and shadow contrasts"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+          title: "Environmental Portrait",
+          description: "Using natural light to create compelling portraits"
+        }
+      ]
     }
   ];
 
@@ -30,7 +75,7 @@ const LightShadowPage = () => {
       <Navigation />
       <div className="pt-32 pb-24">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-12">
             <Button 
               onClick={() => navigate("/projects")} 
               variant="ghost" 
@@ -57,74 +102,45 @@ const LightShadowPage = () => {
                 Light & Shadow
               </h1>
               <p className="text-xl text-gray-600">
-                An exploration of the fundamental elements of photography: the interplay between light and shadow. 
-                This study focuses on how these elements create depth, mood, and visual interest in photographic composition.
+                An exploration of light and shadow in photography, examining how these elements 
+                shape our perception of form, depth, and emotion in visual storytelling.
               </p>
             </div>
 
-            <div className="space-y-12 mt-12">
-              <section className="space-y-6">
-                <h2 className="text-2xl font-bold text-gray-900">Project Overview</h2>
-                <p className="text-gray-600">
-                  This project explores the dramatic impact of light and shadow in photography. Through various techniques 
-                  and experiments, I investigate how different lighting conditions can transform ordinary subjects into 
-                  compelling visual narratives.
-                </p>
-              </section>
-
-              <section className="space-y-6">
-                <h2 className="text-2xl font-bold text-gray-900">Key Techniques</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <h3 className="text-lg font-semibold mb-2">Natural Light</h3>
-                    <p className="text-gray-600">Working with available light to create natural shadows and highlights</p>
-                  </div>
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <h3 className="text-lg font-semibold mb-2">Contrast Control</h3>
-                    <p className="text-gray-600">Managing exposure to enhance the interplay between light and dark</p>
-                  </div>
-                </div>
-              </section>
-
-              <section className="space-y-6">
-                <h2 className="text-2xl font-bold text-gray-900">Example Works</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {examples.map((example, index) => (
-                    <div key={index} className="group relative">
-                      <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+            {sections.map((section, index) => (
+              <section key={section.title} className="space-y-8">
+                <h2 className="text-3xl font-bold text-gray-900 border-b border-gray-200 pb-4">
+                  {section.title}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {section.content.map((item, i) => (
+                    <div key={i} className="group space-y-4">
+                      <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
                         <img 
-                          src={example.image} 
-                          alt={example.title}
+                          src={item.image} 
+                          alt={item.title}
                           className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
-                      <div className="mt-4">
-                        <h3 className="text-lg font-semibold text-gray-900">{example.title}</h3>
-                        <p className="text-sm text-gray-600">{example.description}</p>
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                        <p className="text-gray-600 mt-2">{item.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </section>
+            ))}
 
-              <section className="space-y-6">
-                <h2 className="text-2xl font-bold text-gray-900">Learning Outcomes</h2>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                    <p className="text-gray-600 ml-2">Understanding how different times of day affect light quality and shadow formation</p>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                    <p className="text-gray-600 ml-2">Mastering exposure techniques to capture the full range of tones</p>
-                  </li>
-                  <li className="flex items-start">
-                    <ChevronRight className="h-5 w-5 text-purple-600 mt-1 flex-shrink-0" />
-                    <p className="text-gray-600 ml-2">Developing an eye for compositional balance using light and shadow</p>
-                  </li>
-                </ul>
-              </section>
-            </div>
+            <section className="bg-purple-50 rounded-xl p-8 mt-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Reflection</h2>
+              <p className="text-gray-600">
+                This exploration of light and shadow has deepened my understanding of how these 
+                fundamental elements can be used to create compelling photographs. Through careful 
+                observation and experimentation, I've learned to harness natural light and manipulate 
+                shadows to enhance the emotional impact of my images.
+              </p>
+            </section>
           </div>
         </div>
       </div>
