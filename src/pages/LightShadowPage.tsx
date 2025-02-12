@@ -12,7 +12,7 @@ const LightShadowPage = () => {
 
   const sections = [
     {
-      title: "Inspiration and Planning",
+      title: "My Inspiration and Planning",
       content: [
         {
           image: "/lovable-uploads/08ec1540-42e1-4ff2-9534-68cc8c434e35.png",
