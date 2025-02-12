@@ -27,21 +27,26 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#FDE1D3]/20 via-white to-[#E5DEFF]/20 relative">
-      <Navigation />
-      <Hero />
-      {/* Enhanced gradient transitions */}
-      <div className="h-32 bg-gradient-to-b from-[#FDE1D3]/30 via-[#E5DEFF]/20 to-transparent"></div>
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#FDE1D3]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-1/4 left-0 w-72 h-72 bg-[#E5DEFF]/30 rounded-full blur-3xl -translate-x-1/2" />
+      <div className="absolute bottom-1/3 right-0 w-64 h-64 bg-[#FDE1D3]/20 rounded-full blur-3xl translate-x-1/2" />
+      
+      {/* Moving blobs */}
+      <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-[#E5DEFF]/20 rounded-full blur-3xl animate-blob" />
+      <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-[#FDE1D3]/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+      <div className="absolute bottom-1/4 left-1/3 w-48 h-48 bg-[#E5DEFF]/20 rounded-full blur-3xl animate-blob animation-delay-4000" />
+
+      {/* Geometric patterns */}
+      <div className="absolute inset-0 bg-[linear-gradient(30deg,#FDE1D3_12%,transparent_12.5%,transparent_87%,#FDE1D3_87.5%,#FDE1D3_0)] bg-[length:8px_8px] opacity-[0.15]" />
+      
+      {/* Content */}
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#E5DEFF]/30 to-transparent pointer-events-none"></div>
+        <Navigation />
+        <Hero />
         <Portfolio />
-      </div>
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FDE1D3]/30 to-transparent pointer-events-none"></div>
         <About />
-      </div>
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#E5DEFF]/10 to-[#FDE1D3]/5 pointer-events-none"></div>
         <Contact />
       </div>
       
