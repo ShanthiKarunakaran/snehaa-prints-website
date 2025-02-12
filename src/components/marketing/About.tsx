@@ -1,7 +1,11 @@
 
 import { Camera, Heart, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const About = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-6">
@@ -16,8 +20,7 @@ export const About = () => {
               </h2>
               <p className="text-gray-600 leading-relaxed">
                 I'm a 17-year-old photographer with a passion for capturing life's magical moments. 
-                My journey in photography began three years ago when I got my first camera, 
-                and since then, I've fallen in love with the art of visual storytelling.
+                My journey in photography began three years ago, and since then, I've fallen in love with the art of visual storytelling.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -33,17 +36,12 @@ export const About = () => {
                   <span className="text-gray-700">Award-winning youth photographer 2023</span>
                 </div>
               </div>
-
-              {/* Artist Statement */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Artist Statement</h3>
-                <p className="text-gray-600 leading-relaxed italic">
-                  "Through my lens, I seek to capture the raw emotions and untold stories that surround us every day. 
-                  As a young artist, I bring a fresh perspective to photography, blending modern techniques with timeless storytelling. 
-                  My work focuses on finding beauty in ordinary moments and transforming them into extraordinary memories.
-                  Each photograph is a piece of my heart, reflecting both the subject's authenticity and my creative vision."
-                </p>
-              </div>
+              <Button 
+                onClick={() => navigate("/about.html")}
+                className="bg-purple-600 hover:bg-purple-700 text-white"
+              >
+                More About Me
+              </Button>
             </div>
             <div className="relative">
               <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-xl">
