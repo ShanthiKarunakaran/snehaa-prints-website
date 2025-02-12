@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
@@ -121,10 +120,8 @@ const LightShadowPage = () => {
                   View Original Project <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-white px-6 py-4 rounded-lg relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB] opacity-80"></div>
-                <div className="absolute inset-0 bg-black/20"></div>
-                <span className="relative z-10">Light & Shadow</span>
+              <h1 className="text-5xl sm:text-6xl font-dancing text-gray-800 leading-relaxed">
+                Light & Shadow
               </h1>
               <p className="text-xl text-gray-600">
                 An exploration of light and shadow in photography, examining how these elements 
@@ -134,10 +131,8 @@ const LightShadowPage = () => {
 
             {sections.map((section, index) => (
               <section key={section.title} className="space-y-8">
-                <h2 className="text-3xl font-bold text-white px-6 py-3 rounded-lg relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB] opacity-70"></div>
-                  <div className="absolute inset-0 bg-black/30"></div>
-                  <span className="relative z-10">{section.title}</span>
+                <h2 className="text-4xl font-dancing text-gray-800 leading-relaxed">
+                  {section.title}
                 </h2>
                 <div className={`grid grid-cols-1 ${
                   section.title === "My Inspiration and Planning" 
@@ -167,7 +162,7 @@ const LightShadowPage = () => {
                         </DialogContent>
                       </Dialog>
                       <div>
-                        <h3 className="text-xl font-semibold bg-gradient-to-r from-[#6E59A5]/80 to-[#7E69AB]/80 bg-clip-text text-transparent">
+                        <h3 className="text-xl font-semibold text-gray-800">
                           {item.title}
                         </h3>
                         <p className="text-gray-600 mt-2">{item.description}</p>
@@ -178,11 +173,9 @@ const LightShadowPage = () => {
               </section>
             ))}
 
-            <section className="bg-purple-50 rounded-xl p-8 mt-12">
-              <h2 className="text-2xl font-bold text-white px-6 py-3 rounded-lg relative overflow-hidden mb-4">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB] opacity-70"></div>
-                <div className="absolute inset-0 bg-black/30"></div>
-                <span className="relative z-10">Project Reflection</span>
+            <section className="rounded-xl p-8 mt-12 border border-gray-200">
+              <h2 className="text-4xl font-dancing text-gray-800 leading-relaxed mb-4">
+                Project Reflection
               </h2>
               <p className="text-gray-600">
                 This exploration of light and shadow has deepened my understanding of how these 
