@@ -36,14 +36,14 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo on the left */}
-          <div className="flex items-center space-x-2 text-purple-600">
+          <div className="flex items-center space-x-2 text-white">
             <Camera className="h-6 w-6" />
             <span className="text-xl font-semibold">SnapJoy</span>
           </div>
           
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-purple-600"
+            className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -51,9 +51,9 @@ export const Navigation = () => {
 
           {/* Desktop menu - centered */}
           <div className="hidden md:flex items-center justify-center flex-1 mx-4">
-            <div className="flex items-center space-x-2 bg-purple-50/80 backdrop-blur-sm px-4 py-2 rounded-full">
+            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
+                <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-white/80 transition-colors px-3 py-1">
                   <span>Photography</span>
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
@@ -62,7 +62,7 @@ export const Navigation = () => {
                     <DropdownMenuItem key={category.label} className="cursor-pointer">
                       <a
                         href={category.href}
-                        className="w-full text-gray-600 hover:text-purple-600"
+                        className="w-full text-gray-600 hover:text-black"
                       >
                         {category.label}
                       </a>
@@ -70,16 +70,16 @@ export const Navigation = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <div className="w-px h-4 bg-purple-200 mx-2"></div>
-              <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
+              <div className="w-px h-4 bg-white/20 mx-2"></div>
+              <a href="#about" className="text-white hover:text-white/80 transition-colors px-3 py-1">
                 About Me
               </a>
-              <div className="w-px h-4 bg-purple-200 mx-2"></div>
-              <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
+              <div className="w-px h-4 bg-white/20 mx-2"></div>
+              <a href="#testimonials" className="text-white hover:text-white/80 transition-colors px-3 py-1">
                 Testimonials
               </a>
-              <div className="w-px h-4 bg-purple-200 mx-2"></div>
-              <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
+              <div className="w-px h-4 bg-white/20 mx-2"></div>
+              <a href="#contact" className="text-white hover:text-white/80 transition-colors px-3 py-1">
                 Contact
               </a>
             </div>
@@ -87,35 +87,35 @@ export const Navigation = () => {
 
           {/* Book a Session button on the right */}
           <Button
-            className="hidden md:inline-flex bg-purple-600 hover:bg-purple-700 text-white"
+            className="hidden md:inline-flex bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium"
           >
             Book a Session
           </Button>
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
+            <div className="absolute top-full left-0 right-0 bg-black/90 backdrop-blur-lg shadow-lg md:hidden">
               <div className="flex flex-col space-y-4 p-6">
                 {photographyCategories.map((category) => (
                   <a
                     key={category.label}
                     href={category.href}
-                    className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100"
+                    className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20"
                   >
                     {category.label}
                   </a>
                 ))}
-                <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
+                <a href="#about" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20">
                   About Me
                 </a>
-                <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
+                <a href="#testimonials" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20">
                   Testimonials
                 </a>
-                <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
+                <a href="#contact" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20">
                   Contact
                 </a>
                 <Button
-                  className="bg-purple-600 hover:bg-purple-700 text-white w-full"
+                  className="bg-white hover:bg-white/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm font-medium w-full"
                 >
                   Book a Session
                 </Button>
