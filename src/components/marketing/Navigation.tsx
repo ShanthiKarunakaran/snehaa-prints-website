@@ -23,11 +23,10 @@ export const Navigation = () => {
   }, []);
 
   const photographyCategories = [
-    { label: "All Photos", href: "#portfolio" },
-    { label: "Nature", href: "#portfolio?category=nature" },
     { label: "Portraits", href: "#portfolio?category=portraits" },
-    { label: "Events", href: "#portfolio?category=events" },
-    { label: "Street", href: "#portfolio?category=street" },
+    { label: "Nature", href: "#portfolio?category=nature" },
+    { label: "Still Life", href: "#portfolio?category=still-life" },
+    { label: "Photoshoots", href: "#portfolio?category=photoshoots" },
   ];
 
   return (
