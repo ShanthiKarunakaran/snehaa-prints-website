@@ -1,3 +1,4 @@
+
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
@@ -120,9 +121,12 @@ const LightShadowPage = () => {
                   View Original Project <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </div>
-              <h1 className="text-5xl sm:text-6xl font-dancing text-gray-800 leading-relaxed">
-                Light & Shadow
-              </h1>
+              <div className="relative inline-block">
+                <h1 className="text-5xl sm:text-6xl font-dancing text-gray-800 leading-relaxed">
+                  Light & Shadow
+                </h1>
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-300 via-purple-400 to-purple-300"></div>
+              </div>
               <p className="text-xl text-gray-600">
                 An exploration of light and shadow in photography, examining how these elements 
                 shape our perception of form, depth, and emotion in visual storytelling.
@@ -131,9 +135,12 @@ const LightShadowPage = () => {
 
             {sections.map((section, index) => (
               <section key={section.title} className="space-y-8">
-                <h2 className="text-4xl font-dancing text-gray-800 leading-relaxed">
-                  {section.title}
-                </h2>
+                <div className="relative inline-block">
+                  <h2 className="text-4xl font-dancing text-gray-800 leading-relaxed">
+                    {section.title}
+                  </h2>
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-300 via-purple-400 to-purple-300"></div>
+                </div>
                 <div className={`grid grid-cols-1 ${
                   section.title === "My Inspiration and Planning" 
                     ? "md:grid-cols-2" 
@@ -174,10 +181,13 @@ const LightShadowPage = () => {
             ))}
 
             <section className="rounded-xl p-8 mt-12 border border-gray-200">
-              <h2 className="text-4xl font-dancing text-gray-800 leading-relaxed mb-4">
-                Project Reflection
-              </h2>
-              <p className="text-gray-600">
+              <div className="relative inline-block">
+                <h2 className="text-4xl font-dancing text-gray-800 leading-relaxed mb-4">
+                  Project Reflection
+                </h2>
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-300 via-purple-400 to-purple-300"></div>
+              </div>
+              <p className="text-gray-600 mt-6">
                 This exploration of light and shadow has deepened my understanding of how these 
                 fundamental elements can be used to create compelling photographs. Through careful 
                 observation and experimentation, I've learned to harness natural light and manipulate 
