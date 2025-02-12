@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Lightbulb, Palette, Image, Sparkles, FileHeart, Book, ExternalLink, ChevronRight } from "lucide-react";
@@ -50,4 +49,39 @@ const ProjectsPage = () => {
     },
     {
       title: "Photomontage Journal",
-      description:
+      description: "Documentation and reflection on the photomontage process",
+      icon: Book,
+      url: "https://snehaarunphotographyii.weebly.com/photo-journal-photomontage.html",
+      internalUrl: "/journals/photomontage.html",
+      category: "Process Journals"
+    },
+    {
+      title: "Alternate Techniques Journal",
+      description: "Insights and learnings from experimental techniques",
+      icon: Book,
+      url: "https://snehaarunphotographyii.weebly.com/photo-journal-alternate-techniques.html",
+      internalUrl: "/journals/alternate-techniques.html",
+      category: "Process Journals"
+    }
+  ];
+
+  return (
+    <div>
+      <Navigation />
+      <h1>Projects</h1>
+      <ul>
+        {projects.map(project => (
+          <li key={project.title}>
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <Button onClick={() => navigate(project.internalUrl)}>
+              <project.icon />
+            </Button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ProjectsPage;
