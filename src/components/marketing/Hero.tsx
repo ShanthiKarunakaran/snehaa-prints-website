@@ -21,8 +21,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 animate-fadeIn">
-            See the Unseen, <br />
-            Capture the Memories
+            Capture the Unseen
           </h1>
           
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed animate-fadeIn">
