@@ -58,7 +58,7 @@ export const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto min-w-[160px] border-2 border-[#FDE1D3] bg-transparent hover:bg-[#FDE1D3]/20 text-white shadow-md hover:shadow-lg transition-all duration-300 backdrop-blur-sm"
+              className="w-full sm:w-auto min-w-[160px] bg-[#FDE1D3]/10 hover:bg-[#FDE1D3]/20 text-[#FDE1D3] border-2 border-[#FDE1D3] shadow-md hover:shadow-lg transition-all duration-300 backdrop-blur-sm font-medium"
             >
               Book a Session
             </Button>
