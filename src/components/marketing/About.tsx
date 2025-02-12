@@ -47,7 +47,7 @@ export const About = () => {
               <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/placeholder.svg"
-                  alt="Sarah - Teen Photographer"
+                  alt="Sneha Arun - Teen Photographer"
                   className="object-cover w-full h-full"
                 />
               </div>
