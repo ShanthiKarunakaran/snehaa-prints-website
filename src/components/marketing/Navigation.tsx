@@ -38,7 +38,7 @@ export const Navigation = () => {
           {/* Logo on the left */}
           <div className="flex items-center space-x-2 text-white">
             <Camera className="h-6 w-6" />
-            <span className="text-xl font-semibold">SnapJoy</span>
+            <span className="text-xl font-semibold">snehaa.prints</span>
           </div>
           
           {/* Mobile menu button */}
