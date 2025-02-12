@@ -16,8 +16,13 @@ const LightShadowPage = () => {
       content: [
         {
           image: "/lovable-uploads/08ec1540-42e1-4ff2-9534-68cc8c434e35.png",
-          title: "Project Planning",
-          description: "Initial concept mapping exploring different types of shadows and their relationships in photography"
+          title: "Initial Project Planning",
+          description: "Early concept sketches exploring different angles and lighting scenarios for shadow photography"
+        },
+        {
+          image: "/lovable-uploads/01676206-84f8-4cb6-98d7-821358391ac2.png",
+          title: "Shadow Study Plans",
+          description: "Detailed planning diagrams showing different approaches to capturing shadows, including front and side angles"
         },
         {
           image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
@@ -110,7 +115,7 @@ const LightShadowPage = () => {
                 <h2 className="text-3xl font-bold text-gray-900 border-b border-gray-200 pb-4">
                   {section.title}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {section.content.map((item, i) => (
                     <div key={i} className="group space-y-4">
                       <Dialog>
