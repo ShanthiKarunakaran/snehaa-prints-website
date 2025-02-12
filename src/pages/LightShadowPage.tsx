@@ -183,8 +183,8 @@ const LightShadowPage = () => {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
-                      <CarouselPrevious className="absolute left-4 top-1/3 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
-                      <CarouselNext className="absolute right-4 top-1/3 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
+                      <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
+                      <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
                     </Carousel>
                   </div>
                 ) : (
