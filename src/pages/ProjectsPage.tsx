@@ -129,7 +129,12 @@ const ProjectsPage = () => {
                     text-gray-700 data-[state=active]:brightness-110 
                     data-[state=active]:shadow-lg transition-all 
                     rounded-t-lg rounded-b-none border-b-4 border-yellow-400/50
-                    h-12 font-medium`}
+                    h-12 font-medium relative
+                    data-[state=active]:translate-y-[-4px]
+                    data-[state=active]:border-b-[6px]
+                    data-[state=active]:font-bold
+                    data-[state=active]:text-gray-900
+                    data-[state=active]:z-10`}
                   >
                     {category}
                   </TabsTrigger>
