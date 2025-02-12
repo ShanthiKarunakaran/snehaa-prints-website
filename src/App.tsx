@@ -11,6 +11,10 @@ import ProjectsPage from "./pages/ProjectsPage";
 import LightShadowPage from "./pages/LightShadowPage";
 import ColorTheoryPage from "./pages/ColorTheoryPage";
 import PhotomontagePage from "./pages/PhotomontagePage";
+import AlternateTechniquesPage from "./pages/AlternateTechniquesPage";
+import ChoiceProjectPage from "./pages/ChoiceProjectPage";
+import PhotomontageJournalPage from "./pages/PhotomontageJournalPage";
+import AlternateTechniquesJournalPage from "./pages/AlternateTechniquesJournalPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +31,10 @@ const App = () => (
           <Route path="/technique/light-shadow.html" element={<LightShadowPage />} />
           <Route path="/technique/color-theory.html" element={<ColorTheoryPage />} />
           <Route path="/technique/photomontage.html" element={<PhotomontagePage />} />
+          <Route path="/technique/alternate-techniques.html" element={<AlternateTechniquesPage />} />
+          <Route path="/projects/choice.html" element={<ChoiceProjectPage />} />
+          <Route path="/journals/photomontage.html" element={<PhotomontageJournalPage />} />
+          <Route path="/journals/alternate-techniques.html" element={<AlternateTechniquesJournalPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
