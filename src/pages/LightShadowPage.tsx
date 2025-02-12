@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
@@ -12,14 +11,9 @@ const LightShadowPage = () => {
       title: "Inspiration and Planning",
       content: [
         {
-          image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-          title: "Initial Research",
-          description: "Exploring the fundamentals of light behavior and shadow formation in photography"
-        },
-        {
-          image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-          title: "Concept Development",
-          description: "Sketching ideas and planning shot compositions"
+          image: "/lovable-uploads/08ec1540-42e1-4ff2-9534-68cc8c434e35.png",
+          title: "Project Planning",
+          description: "Initial concept mapping exploring different types of shadows and their relationships in photography"
         },
         {
           image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
@@ -112,7 +106,7 @@ const LightShadowPage = () => {
                 <h2 className="text-3xl font-bold text-gray-900 border-b border-gray-200 pb-4">
                   {section.title}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {section.content.map((item, i) => (
                     <div key={i} className="group space-y-4">
                       <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
