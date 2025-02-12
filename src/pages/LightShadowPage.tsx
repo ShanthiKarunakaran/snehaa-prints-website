@@ -5,6 +5,13 @@ import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const LightShadowPage = () => {
   const navigate = useNavigate();
@@ -141,42 +148,83 @@ const LightShadowPage = () => {
                   </h2>
                   <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-300 via-purple-400 to-purple-300"></div>
                 </div>
-                <div className={`grid grid-cols-1 ${
-                  section.title === "My Inspiration and Planning" 
-                    ? "md:grid-cols-2" 
-                    : section.title === "Reference Collection"
-                    ? "md:grid-cols-3 lg:grid-cols-5"
-                    : "md:grid-cols-3"
-                } gap-6`}>
-                  {section.content.map((item, i) => (
-                    <div key={i} className="group space-y-4">
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100 cursor-pointer">
+                {section.title === "Final Series" ? (
+                  <div className="relative px-12">
+                    <Carousel className="w-full max-w-4xl mx-auto">
+                      <CarouselContent>
+                        {section.content.map((item, i) => (
+                          <CarouselItem key={i}>
+                            <div className="space-y-4">
+                              <Dialog>
+                                <DialogTrigger asChild>
+                                  <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100 cursor-pointer">
+                                    <img 
+                                      src={item.image} 
+                                      alt={item.title}
+                                      className="object-cover w-full h-full transform transition-transform duration-300 hover:scale-105"
+                                    />
+                                  </div>
+                                </DialogTrigger>
+                                <DialogContent className="max-w-screen-lg w-[90vw]">
+                                  <img 
+                                    src={item.image} 
+                                    alt={item.title}
+                                    className="w-full h-auto object-contain max-h-[80vh]"
+                                  />
+                                </DialogContent>
+                              </Dialog>
+                              <div className="text-center">
+                                <h3 className="text-xl font-semibold text-gray-800">
+                                  {item.title}
+                                </h3>
+                                <p className="text-gray-600 mt-2">{item.description}</p>
+                              </div>
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
+                  </div>
+                ) : (
+                  <div className={`grid grid-cols-1 ${
+                    section.title === "My Inspiration and Planning" 
+                      ? "md:grid-cols-2" 
+                      : section.title === "Reference Collection"
+                      ? "md:grid-cols-3 lg:grid-cols-5"
+                      : "md:grid-cols-3"
+                  } gap-6`}>
+                    {section.content.map((item, i) => (
+                      <div key={i} className="group space-y-4">
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100 cursor-pointer">
+                              <img 
+                                src={item.image} 
+                                alt={item.title}
+                                className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-105"
+                              />
+                            </div>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-screen-lg w-[90vw]">
                             <img 
                               src={item.image} 
                               alt={item.title}
-                              className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-105"
+                              className="w-full h-auto object-contain max-h-[80vh]"
                             />
-                          </div>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-screen-lg w-[90vw]">
-                          <img 
-                            src={item.image} 
-                            alt={item.title}
-                            className="w-full h-auto object-contain max-h-[80vh]"
-                          />
-                        </DialogContent>
-                      </Dialog>
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-800">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-600 mt-2">{item.description}</p>
+                          </DialogContent>
+                        </Dialog>
+                        <div>
+                          <h3 className="text-xl font-semibold text-gray-800">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 mt-2">{item.description}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </section>
             ))}
 
