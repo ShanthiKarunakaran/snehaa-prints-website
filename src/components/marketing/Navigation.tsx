@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Camera, ChevronDown, Instagram, Facebook, Twitter } from "lucide-react";
+import { Menu, X, ChevronDown, Instagram, Facebook, Twitter } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,15 +37,21 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo on the left */}
           <div className="flex items-center space-x-2 text-white">
-            <div className="relative flex items-center">
-              <div className="relative w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-[#6E59A5] text-xl font-bold absolute left-2 top-1/2 -translate-y-1/2">◠</span>
-                <span className="text-[#6E59A5] text-lg absolute right-2 top-1/2 -translate-y-1/2">•</span>
-                <div className="absolute w-3 h-3 bg-[#8E9196] rounded-full top-2 right-2"></div>
-                <div className="absolute w-4 h-4 border-2 border-[#8E9196] rounded-full top-2 left-2"></div>
-                <div className="absolute w-2 h-1 bg-[#8E9196] transform rotate-[15deg] bottom-3 left-4"></div>
-              </div>
-            </div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="bg-white/90 rounded-full p-1 shadow-lg backdrop-blur-sm"
+            >
+              <circle cx="20" cy="20" r="20" fill="white" fillOpacity="0.9"/>
+              <path d="M12 20C14 18 16 18 18 20" stroke="#6E59A5" strokeWidth="2" strokeLinecap="round"/>
+              <circle cx="28" cy="20" r="2" fill="#6E59A5"/>
+              <circle cx="28" cy="12" r="3" fill="#8E9196"/>
+              <circle cx="12" cy="12" r="4" stroke="#8E9196" strokeWidth="2" fill="none"/>
+              <rect x="14" y="26" width="8" height="2" transform="rotate(15 14 26)" fill="#8E9196"/>
+            </svg>
             <span className="text-xl font-semibold">snehaa.prints</span>
           </div>
           
