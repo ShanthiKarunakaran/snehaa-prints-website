@@ -121,8 +121,10 @@ const LightShadowPage = () => {
                   View Original Project <ExternalLink className="ml-1 h-3 w-3" />
                 </a>
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-white px-6 py-4 rounded-lg bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB]">
-                Light & Shadow
+              <h1 className="text-4xl sm:text-5xl font-bold text-white px-6 py-4 rounded-lg relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB] opacity-80"></div>
+                <div className="absolute inset-0 bg-black/20"></div>
+                <span className="relative z-10">Light & Shadow</span>
               </h1>
               <p className="text-xl text-gray-600">
                 An exploration of light and shadow in photography, examining how these elements 
@@ -132,8 +134,10 @@ const LightShadowPage = () => {
 
             {sections.map((section, index) => (
               <section key={section.title} className="space-y-8">
-                <h2 className="text-3xl font-bold text-white px-6 py-3 rounded-lg bg-gradient-to-r from-[#6E59A5] to-[#7E69AB]">
-                  {section.title}
+                <h2 className="text-3xl font-bold text-white px-6 py-3 rounded-lg relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB] opacity-70"></div>
+                  <div className="absolute inset-0 bg-black/30"></div>
+                  <span className="relative z-10">{section.title}</span>
                 </h2>
                 <div className={`grid grid-cols-1 ${
                   section.title === "My Inspiration and Planning" 
@@ -175,8 +179,10 @@ const LightShadowPage = () => {
             ))}
 
             <section className="bg-purple-50 rounded-xl p-8 mt-12">
-              <h2 className="text-2xl font-bold text-white px-6 py-3 rounded-lg bg-gradient-to-r from-[#6E59A5] to-[#7E69AB] mb-4">
-                Project Reflection
+              <h2 className="text-2xl font-bold text-white px-6 py-3 rounded-lg relative overflow-hidden mb-4">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6E59A5] via-[#9b87f5] to-[#7E69AB] opacity-70"></div>
+                <div className="absolute inset-0 bg-black/30"></div>
+                <span className="relative z-10">Project Reflection</span>
               </h2>
               <p className="text-gray-600">
                 This exploration of light and shadow has deepened my understanding of how these 
