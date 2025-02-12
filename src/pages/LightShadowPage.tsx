@@ -154,16 +154,14 @@ const LightShadowPage = () => {
                         {section.content.map((item, i) => (
                           <CarouselItem key={i}>
                             <div className="space-y-4">
-                              <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+                              <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100 relative">
                                 <img 
                                   src={item.image} 
                                   alt={item.title}
                                   className="object-cover w-full h-full"
                                 />
-                                <div className="absolute inset-0 flex items-center justify-between p-4">
-                                  <CarouselPrevious className="relative left-0 translate-x-0 translate-y-0 bg-white/70 hover:bg-white/90" />
-                                  <CarouselNext className="relative right-0 translate-x-0 translate-y-0 bg-white/70 hover:bg-white/90" />
-                                </div>
+                                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
+                                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
                               </div>
                               <div className="text-center">
                                 <h3 className="text-xl font-semibold text-gray-800">
