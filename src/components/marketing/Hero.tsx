@@ -43,7 +43,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed animate-fadeIn drop-shadow-md">
-            Hi! I'm Sarah, a teen photographer with a passion for capturing the stories that lies beyond the visible through my lens. 
+            Hi! I'm Sneha Arun, a teen photographer with a passion for capturing the stories that lies beyond the visible through my lens. 
             Let's preserve those ethereal moments together!
           </p>
           
