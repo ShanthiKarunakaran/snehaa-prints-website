@@ -149,7 +149,7 @@ const LightShadowPage = () => {
                   <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-300 via-purple-400 to-purple-300"></div>
                 </div>
                 {section.title === "Final Series" ? (
-                  <div className="relative px-12">
+                  <div className="relative">
                     <Carousel className="w-full max-w-4xl mx-auto">
                       <CarouselContent>
                         {section.content.map((item, i) => (
@@ -157,11 +157,11 @@ const LightShadowPage = () => {
                             <div className="space-y-4">
                               <Dialog>
                                 <DialogTrigger asChild>
-                                  <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100 cursor-pointer">
+                                  <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100 cursor-pointer relative group">
                                     <img 
                                       src={item.image} 
                                       alt={item.title}
-                                      className="object-cover w-full h-full transform transition-transform duration-300 hover:scale-105"
+                                      className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-105"
                                     />
                                   </div>
                                 </DialogTrigger>
@@ -183,8 +183,8 @@ const LightShadowPage = () => {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
-                      <CarouselPrevious />
-                      <CarouselNext />
+                      <CarouselPrevious className="absolute left-4 top-1/3 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
+                      <CarouselNext className="absolute right-4 top-1/3 -translate-y-1/2 bg-white/70 hover:bg-white/90" />
                     </Carousel>
                   </div>
                 ) : (
