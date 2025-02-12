@@ -85,6 +85,10 @@ export const Navigation = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               <div className="w-px h-4 bg-white/20 mx-2"></div>
+              <a href="/projects" className="text-white hover:text-white/80 transition-colors px-3 py-1 focus:outline-none">
+                Projects
+              </a>
+              <div className="w-px h-4 bg-white/20 mx-2"></div>
               <a href="#about" className="text-white hover:text-white/80 transition-colors px-3 py-1 focus:outline-none">
                 About Me
               </a>
@@ -132,6 +136,9 @@ export const Navigation = () => {
                     {category.label}
                   </a>
                 ))}
+                <a href="/projects" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none">
+                  Projects
+                </a>
                 <a href="#about" className="text-white hover:text-white/80 transition-colors px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:outline-none">
                   About Me
                 </a>
