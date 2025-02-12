@@ -70,10 +70,10 @@ const ProjectsPage = () => {
   const categories = ["Technique Study", "Creative Projects", "Personal Work", "Process Journals"];
   
   const tabColors = {
-    "Technique Study": "bg-[#8B5CF6] hover:bg-[#7C3AED]",
-    "Creative Projects": "bg-[#F97316] hover:bg-[#EA580C]",
-    "Personal Work": "bg-[#0EA5E9] hover:bg-[#0284C7]",
-    "Process Journals": "bg-[#D946EF] hover:bg-[#C026D3]"
+    "Technique Study": "bg-[#D6BCFA] hover:bg-[#7E69AB]",
+    "Creative Projects": "bg-[#FEC6A1] hover:bg-[#FDE1D3]",
+    "Personal Work": "bg-[#D3E4FD] hover:bg-[#E5DEFF]",
+    "Process Journals": "bg-[#FFDEE2] hover:bg-[#FDE1D3]"
   };
 
   const ProjectList = ({ items }: { items: typeof projects }) => (
@@ -126,7 +126,7 @@ const ProjectsPage = () => {
                     key={category}
                     value={category}
                     className={`${tabColors[category as keyof typeof tabColors]} 
-                    text-white data-[state=active]:brightness-110 
+                    text-gray-700 data-[state=active]:brightness-110 
                     data-[state=active]:shadow-lg transition-all 
                     rounded-t-lg rounded-b-none border-b-4 border-yellow-400/50
                     h-12 font-medium`}
