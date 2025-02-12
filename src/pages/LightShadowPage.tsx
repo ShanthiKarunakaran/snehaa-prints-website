@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/marketing/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
@@ -150,33 +149,22 @@ const LightShadowPage = () => {
                 </div>
                 {section.title === "Final Series" ? (
                   <div className="relative">
-                    <Carousel className="w-full max-w-4xl mx-auto" opts={{ loop: true }}>
+                    <Carousel className="w-full max-w-4xl mx-auto">
                       <CarouselContent>
                         {section.content.map((item, i) => (
                           <CarouselItem key={i}>
                             <div className="space-y-4">
-                              <Dialog>
-                                <DialogTrigger asChild>
-                                  <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100 cursor-pointer relative group">
-                                    <img 
-                                      src={item.image} 
-                                      alt={item.title}
-                                      className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 flex items-center justify-between p-4">
-                                      <CarouselPrevious className="relative left-0 translate-x-0 translate-y-0 bg-white/70 hover:bg-white/90" />
-                                      <CarouselNext className="relative right-0 translate-x-0 translate-y-0 bg-white/70 hover:bg-white/90" />
-                                    </div>
-                                  </div>
-                                </DialogTrigger>
-                                <DialogContent className="max-w-screen-lg w-[90vw]">
-                                  <img 
-                                    src={item.image} 
-                                    alt={item.title}
-                                    className="w-full h-auto object-contain max-h-[80vh]"
-                                  />
-                                </DialogContent>
-                              </Dialog>
+                              <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-100">
+                                <img 
+                                  src={item.image} 
+                                  alt={item.title}
+                                  className="object-cover w-full h-full"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-between p-4">
+                                  <CarouselPrevious className="relative left-0 translate-x-0 translate-y-0 bg-white/70 hover:bg-white/90" />
+                                  <CarouselNext className="relative right-0 translate-x-0 translate-y-0 bg-white/70 hover:bg-white/90" />
+                                </div>
+                              </div>
                               <div className="text-center">
                                 <h3 className="text-xl font-semibold text-gray-800">
                                   {item.title}
