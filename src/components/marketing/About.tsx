@@ -19,8 +19,8 @@ export const About = () => {
                 Hi, I'm Sarah!
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                I'm a 17-year-old photographer with a passion for capturing life's magical moments. 
-                My journey in photography began three years ago, and since then, I've fallen in love with the art of visual storytelling.
+                I'm a teen photographer with a passion for capturing life's magical moments. 
+                My journey in photography began 2 years ago, and since then, I've fallen in love with the art of visual storytelling.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
