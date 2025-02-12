@@ -1,6 +1,13 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Camera } from "lucide-react";
+import { Menu, X, Camera, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -14,6 +21,14 @@ export const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const photographyCategories = [
+    { label: "All Photos", href: "#portfolio" },
+    { label: "Nature", href: "#portfolio?category=nature" },
+    { label: "Portraits", href: "#portfolio?category=portraits" },
+    { label: "Events", href: "#portfolio?category=events" },
+    { label: "Street", href: "#portfolio?category=street" },
+  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -34,9 +49,24 @@ export const Navigation = () => {
           </button>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#portfolio" className="text-gray-600 hover:text-purple-600 transition-colors">
-              Portfolio
-            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors">
+                <span>Photography</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-48 bg-white">
+                {photographyCategories.map((category) => (
+                  <DropdownMenuItem key={category.label} className="cursor-pointer">
+                    <a
+                      href={category.href}
+                      className="w-full text-gray-600 hover:text-purple-600"
+                    >
+                      {category.label}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
               About
             </a>
@@ -56,9 +86,15 @@ export const Navigation = () => {
           {isMenuOpen && (
             <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
               <div className="flex flex-col space-y-4 p-6">
-                <a href="#portfolio" className="text-gray-600 hover:text-purple-600 transition-colors">
-                  Portfolio
-                </a>
+                {photographyCategories.map((category) => (
+                  <a
+                    key={category.label}
+                    href={category.href}
+                    className="text-gray-600 hover:text-purple-600 transition-colors"
+                  >
+                    {category.label}
+                  </a>
+                ))}
                 <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
                   About
                 </a>
