@@ -1,3 +1,4 @@
+
 import { Camera, Heart, Star } from "lucide-react";
 
 export const About = () => {
@@ -31,6 +32,17 @@ export const About = () => {
                   <Star className="h-5 w-5 text-purple-600" />
                   <span className="text-gray-700">Award-winning youth photographer 2023</span>
                 </div>
+              </div>
+
+              {/* Artist Statement */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Artist Statement</h3>
+                <p className="text-gray-600 leading-relaxed italic">
+                  "Through my lens, I seek to capture the raw emotions and untold stories that surround us every day. 
+                  As a young artist, I bring a fresh perspective to photography, blending modern techniques with timeless storytelling. 
+                  My work focuses on finding beauty in ordinary moments and transforming them into extraordinary memories.
+                  Each photograph is a piece of my heart, reflecting both the subject's authenticity and my creative vision."
+                </p>
               </div>
             </div>
             <div className="relative">
