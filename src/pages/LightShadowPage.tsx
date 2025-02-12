@@ -150,7 +150,7 @@ const LightShadowPage = () => {
                 </div>
                 {section.title === "Final Series" ? (
                   <div className="relative">
-                    <Carousel className="w-full max-w-4xl mx-auto">
+                    <Carousel className="w-full max-w-4xl mx-auto" opts={{ loop: true }}>
                       <CarouselContent>
                         {section.content.map((item, i) => (
                           <CarouselItem key={i}>
