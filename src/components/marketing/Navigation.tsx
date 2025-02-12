@@ -51,9 +51,9 @@ export const Navigation = () => {
 
           {/* Desktop menu - centered */}
           <div className="hidden md:flex items-center justify-center flex-1 mx-4">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-2 bg-purple-50/80 backdrop-blur-sm px-4 py-2 rounded-full">
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
+                <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
                   <span>Photography</span>
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
@@ -70,13 +70,16 @@ export const Navigation = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
+              <div className="w-px h-4 bg-purple-200 mx-2"></div>
+              <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
                 About Me
               </a>
-              <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
+              <div className="w-px h-4 bg-purple-200 mx-2"></div>
+              <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
                 Testimonials
               </a>
-              <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors px-4 py-2 rounded-full bg-purple-50 hover:bg-purple-100">
+              <div className="w-px h-4 bg-purple-200 mx-2"></div>
+              <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors px-3 py-1">
                 Contact
               </a>
             </div>
