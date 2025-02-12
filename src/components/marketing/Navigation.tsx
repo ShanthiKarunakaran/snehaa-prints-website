@@ -35,11 +35,13 @@ export const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
+          {/* Logo on the left */}
           <div className="flex items-center space-x-2 text-purple-600">
             <Camera className="h-6 w-6" />
             <span className="text-xl font-semibold">SnapJoy</span>
           </div>
           
+          {/* Mobile menu button */}
           <button
             className="md:hidden text-purple-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -47,41 +49,47 @@ export const Navigation = () => {
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors">
-                <span>Photography</span>
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-48 bg-white">
-                {photographyCategories.map((category) => (
-                  <DropdownMenuItem key={category.label} className="cursor-pointer">
-                    <a
-                      href={category.href}
-                      className="w-full text-gray-600 hover:text-purple-600"
-                    >
-                      {category.label}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
-              About
-            </a>
-            <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors">
-              Testimonials
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors">
-              Contact
-            </a>
-            <Button
-              className="bg-purple-600 hover:bg-purple-700 text-white"
-            >
-              Book a Session
-            </Button>
+          {/* Desktop menu - centered */}
+          <div className="hidden md:flex items-center justify-center flex-1 mx-4">
+            <div className="flex items-center space-x-8">
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-600 hover:text-purple-600 transition-colors">
+                  <span>Photography</span>
+                  <ChevronDown className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-48 bg-white">
+                  {photographyCategories.map((category) => (
+                    <DropdownMenuItem key={category.label} className="cursor-pointer">
+                      <a
+                        href={category.href}
+                        className="w-full text-gray-600 hover:text-purple-600"
+                      >
+                        {category.label}
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
+                About Me
+              </a>
+              <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors">
+                Testimonials
+              </a>
+              <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors">
+                Contact
+              </a>
+            </div>
           </div>
 
+          {/* Book a Session button on the right */}
+          <Button
+            className="hidden md:inline-flex bg-purple-600 hover:bg-purple-700 text-white"
+          >
+            Book a Session
+          </Button>
+
+          {/* Mobile menu */}
           {isMenuOpen && (
             <div className="absolute top-full left-0 right-0 bg-white shadow-lg md:hidden">
               <div className="flex flex-col space-y-4 p-6">
@@ -95,7 +103,7 @@ export const Navigation = () => {
                   </a>
                 ))}
                 <a href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">
-                  About
+                  About Me
                 </a>
                 <a href="#testimonials" className="text-gray-600 hover:text-purple-600 transition-colors">
                   Testimonials
