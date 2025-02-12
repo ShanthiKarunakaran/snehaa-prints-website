@@ -55,12 +55,29 @@ const AboutPage = () => {
                 </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Artist Statement</h2>
-                <blockquote className="text-gray-600 border-l-4 border-purple-200 pl-6 italic">
-                  "Through my lens, I seek to capture the raw emotions and untold stories that surround us every day. 
-                  As a young artist, I bring a fresh perspective to photography, blending modern techniques with timeless storytelling. 
-                  My work focuses on finding beauty in ordinary moments and transforming them into extraordinary memories.
-                  Each photograph is a piece of my heart, reflecting both the subject's authenticity and my creative vision."
-                </blockquote>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-xl font-semibold text-purple-800 mb-4">Exploration</h3>
+                    <p className="text-gray-600">
+                      Throughout the semester, I discovered that I took better pictures when I brainstormed thoroughly and relied less on Lightroom for editing. When brainstorming, the mind map always worked the best when I was developing an idea, because I was able to dive deeper into the process of taking a creative picture once I had many ideas written down in front of me. For example, I had a detailed mind map for the alternative techniques project, and though I did not end up using some of my original ideas, I created new, even better pictures by combining the ideas I had written down in my map. I enjoyed using Lightroom, but I found that my pictures looked better and more natural when I did not heavily edit the picture. I like that my pictures look slightly imperfect when I do not heavily edit them; I believe it adds to the character of the picture, as seen with my picture of the egg for the choice project. I could have increased the exposure of the picture so that the egg was clearly visible, but it is more interesting that half of the egg is shrouded in shadow.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-purple-800 mb-4">Voice</h3>
+                    <p className="text-gray-600">
+                      I enjoyed focusing on portrait lighting for the photomontage project and photo journal, particularly because I loved having people "model" for me. One of the best parts of my final photomontage series is the portraits themselves, because I was able to convey a different emotion based on the lighting. It was also fun to take pictures focusing on light and shadow, because I have always found the use of shadows in pictures very intriguing. In the final series, I focused on GOBOS and the shadows of objects themselves, and I appreciate that these techniques helped bring out the theme of the series.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-purple-800 mb-4">Growth</h3>
+                    <p className="text-gray-600">
+                      I experienced the most growth in the photomontage project by improving my Photoshop skills. Last semester, I didn't enjoy Photoshop, because I did not spend enough time trying to learn its features and experiment with different pictures. However, this semester, I put several hours into using Photoshop, experimenting with several tools that ultimately made my pictures look more realistic. My portraits also improved, as compared to last semester, because I took more creative risks and experimented thoroughly with different lighting techniques before choosing ones that would convey the theme of the series well.
+                    </p>
+                  </div>
+                </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">My Journey</h2>
                 <p className="text-gray-600">
