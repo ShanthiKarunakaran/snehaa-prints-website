@@ -27,14 +27,20 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-gradient-to-b from-[#FDE1D3]/10 to-white relative">
       <Navigation />
       <Hero />
       {/* Gradient transition div */}
-      <div className="h-24 bg-gradient-to-b from-[#FDE1D3]/20 to-white"></div>
-      <Portfolio />
-      <About />
-      <Contact />
+      <div className="h-24 bg-gradient-to-b from-[#FDE1D3]/20 via-[#E5DEFF]/20 to-white"></div>
+      <div className="bg-gradient-to-b from-white via-[#E5DEFF]/10 to-white">
+        <Portfolio />
+      </div>
+      <div className="bg-gradient-to-b from-white via-[#FDE1D3]/10 to-white">
+        <About />
+      </div>
+      <div className="bg-[#E5DEFF]/5">
+        <Contact />
+      </div>
       
       {/* Back to Top Button */}
       <button
