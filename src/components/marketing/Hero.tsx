@@ -39,7 +39,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white drop-shadow-md animate-fadeIn">
-            I Like to Capture Vignettes of Life
+            Capturing Life's Vignettes
           </h1>
           
           <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed animate-fadeIn drop-shadow-md">
