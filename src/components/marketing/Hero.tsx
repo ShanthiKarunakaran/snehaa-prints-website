@@ -30,11 +30,11 @@ export const Hero = () => {
       <div className="container mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8 sm:space-y-10">
           <div className="flex items-center justify-center gap-4">
-            <div className="relative w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-              <div className="absolute w-3 h-3 bg-[#8E9196] rounded-full top-4 left-4"></div>
-              <div className="absolute w-4 h-4 border-2 border-[#8E9196] rounded-full top-4 right-3"></div>
-              <div className="absolute w-2 h-1 bg-[#8E9196] transform rotate-[15deg] top-8 left-7"></div>
-            </div>
+            <img
+              src="/lovable-uploads/f8e90fb0-301b-4962-9987-be1d6b57f337.png"
+              alt="Logo"
+              className="w-16 h-16 rounded-full object-cover shadow-lg bg-white/90 backdrop-blur-sm p-1"
+            />
             <span className="text-3xl font-bold text-white drop-shadow-md">snehaa.prints</span>
           </div>
           
